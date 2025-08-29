@@ -1,0 +1,25 @@
+{
+  "name": "mobility-voting-app",
+  "version": "1.0.0",
+  "description": "Modern voting platform built with PocketBase and SvelteKit",
+  "private": true,
+  "scripts": {
+    "setup": "bash setup.sh",
+    "dev": "docker-compose up -d && cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "deploy": "bash scripts/deploy.sh",
+    "migrate": "node scripts/migrate-from-wordpress.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mobility-voting-app.git"
+  },
+  "keywords": [
+    "voting",
+    "pocketbase",
+    "sveltekit",
+    "realtime"
+  ],
+  "author": "Mobility Trailblazers",
+  "license": "MIT"
+}
