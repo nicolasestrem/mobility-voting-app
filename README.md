@@ -31,7 +31,7 @@ A modern, lightweight voting platform built with PocketBase and SvelteKit, desig
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mobility-voting-app.git
+git clone https://github.com/nicolasestrem/mobility-voting-app.git
 cd mobility-voting-app
 
 # Copy environment variables
