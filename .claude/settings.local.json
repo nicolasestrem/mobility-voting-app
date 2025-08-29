@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm:*)",
+      "mcp__kapture__new_tab",
+      "mcp__kapture__navigate",
+      "mcp__kapture__screenshot",
+      "mcp__kapture__elements",
+      "mcp__kapture__dom",
+      "mcp__kapture__reload",
+      "mcp__kapture__keypress",
+      "Bash(git add:*)",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)",
+      "mcp__kapture__fill",
+      "Bash(TZ='Europe/Paris' date)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(php -l:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "mcp__kapture__list_tabs",
+      "mcp__kapture__click",
+      "Bash(winget:*)",
+      "Bash(npx sv create:*)",
+      "Bash(mkdir:*)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
+    ]
+    "deny": [],
+    "ask": []
+  }
+}

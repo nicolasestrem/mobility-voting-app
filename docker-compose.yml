@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  pocketbase:
+    image: ghcr.io/muchobien/pocketbase:latest
+    container_name: voting_pocketbase
+    restart: unless-stopped
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./backend/pb_data:/pb_data
+      - ./backend/pb_migrations:/pb_migrations
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8090/api/health || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build: ./frontend
+    container_name: voting_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PUBLIC_POCKETBASE_URL=http://pocketbase:8090
+      - NODE_ENV=production
+    depends_on:
+      - pocketbase
